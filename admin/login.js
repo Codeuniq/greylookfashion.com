@@ -12,6 +12,6 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     window.location.href = "accounts.html";
   } else {
     document.getElementById("error").innerText =
-      "Invalid email or password!";
+      "Invalid User or password!";
   }
 });
