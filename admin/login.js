@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userEmail", email);
 
-    window.location.href = "admin.html";
+    window.location.href = "accounts.html";
   } else {
     document.getElementById("error").innerText =
       "Invalid email or password!";
