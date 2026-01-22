@@ -8,19 +8,19 @@ toggleBtn.onclick = () => {
 
 // 🔒 Page protection
 if(localStorage.getItem("isLoggedIn") !== "true"){
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 // logout (FIXED)
 document.getElementById("logoutLink").addEventListener("click", function(e){
   e.preventDefault(); // 🚨 IMPORTANT
   localStorage.clear();
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
 document.getElementById("logoutLinks").addEventListener("click", function(e){
   e.preventDefault(); // 🚨 IMPORTANT
   localStorage.clear();
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });
 
 
