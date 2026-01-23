@@ -47,10 +47,6 @@ accountsBtn.onclick = () => {
 
 
 
-function openSheet(type){
-  const base = "https://docs.google.com/spreadsheets/d/19j15e4jR1czzByvwzQ_OI_TZURrq4kWo/edit";
-  window.open(base, "_blank");
-}
 
 function updateClock() {
   const now = new Date();
