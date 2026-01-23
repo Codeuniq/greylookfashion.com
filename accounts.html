@@ -1,64 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>Grey Look Accounts</title>
   <meta charset="utf-8">
-  <meta name="description" content="Greylook Fashion is a premium fashion brand proudly based in Dubai, UAE. We specialize in high-quality jeans, shirts, and T-shirts, delivering a refined grey-look style for modern men.">
-  <link href="images/CURRENTs.png" rel="icon">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="author" content="MUHAMMED FAISAN">
+  <link href="images/CURRENTs.png" rel="icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="admin/admin.css">
 </head>
 
 <body>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar" id="sidebar">
-    <div class="sidebar-brand">
-      <img src="images/CURRENT.png" alt="" class="logo">
+<div class="mobile-overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <img src="images/CURRENT.png" class="logo">
+  </div>
+  <ul class="sidebar-menu">
+    <li><a  id="dashboardBtn"><i class="fa fa-chart-line"></i><span>Dashboard</span></a></li>
+    <li><a id="accountsBtn"><i class="fa fa-box"></i><span>Accounts</span></a></li>
+    <li><a id="logoutLink"><i class="fa fa-sign-out"></i><span>Logout</span></a></li>
+  </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<header class="navbar">
+  <div class="nav-left">
+    <i class="fa fa-bars" id="toggleBtn"></i>
+    <span>Grey Look Accounts</span>
+  </div>
+  <div class="nav-right">
+    <div class="profile-icon" id="profileIcon">
+      <img src="images/icon.jpeg">
     </div>
-    <ul class="sidebar-menu">
-      <li><a href="admin.html"><i class="fa fa-box"></i> <span>Accounts</span></a></li>
-      <!-- <li><a href="#"><i class="fa fa-user"></i> <span>Users</span></a></li> -->
-      <li><a id="logoutLink"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
-    </ul>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a id="logoutLinks"><i class="fa fa-sign-out"></i> Logout</a>
+    </div>
+  </div>
+</header>
+
+<!-- DASHBOARD -->
+<div class="dashboard" id="dashboardView">
+
+  <!-- HEADER WITH LOGO & GREETING -->
+  <div class="dashboard-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+    <div style="display:flex;align-items:center;gap:15px;">
+      <img src="images/CURRENTs.png" alt="Logo" style="width:60px;height:60px;border-radius:10px;">
+      <div>
+        <h2 style="margin:0;color:#334155;">Grey Look Fashion</h2>
+        <p id="greeting" style="margin:0;color:#475569;font-size:14px;">Welcome!</p>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <p id="clock" style="font-size:16px;color:#334155;font-weight:600;margin:0;"></p>
+      <p id="date" style="font-size:14px;color:#475569;margin:0;"></p>
+    </div>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="main">
-    <!-- NAVBAR -->
-    <header class="navbar">
-      <div class="nav-left">
-        <i class="fa fa-bars" id="toggleBtn"></i>
-        <span>Dashboard</span>
-      </div>
-      <div class="nav-right">
-        <div class="profile-icon" id="profileIcon">
-          <img src="images/icon.jpeg" alt="Profile">
-        </div>
-        <div class="dropdown-menu" id="dropdownMenu">
-          <!-- <a href="#">Profile</a>
-          <a href="#">Settings</a> -->
-          <a id="logoutLinks"><i class="fa fa-sign-out" style="color: black;"></i>Logout</a>
-        </div>
-      </div>
-    </header>
-    <!-- CONTENT CONTAINER -->
-    <div class="content">
-    <iframe
-      src="https://docs.google.com/spreadsheets/d/19j15e4jR1czzByvwzQ_OI_TZURrq4kWo/edit?usp=sharing&ouid=100358538746186639831&rtpof=true&sd=true"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <!-- COMPANY DETAILS GRID -->
+  <div class="kpi-grid">
+
+    <div class="card kpi"><i class="fa fa-building"></i><h4>Company Name</h4><p>Grey Look Fashion</p></div>
+
+    <div class="card kpi"><i class="fa fa-map-marker-alt"></i><h4>Address</h4><p>Deira, Dubai, UAE</p></div>
+
+    <div class="card kpi"><i class="fa fa-phone"></i><h4>Contact</h4><p>+971 50 956 5992</p></div>
+
+    <div class="card kpi"><i class="fa fa-envelope"></i><h4>Email</h4><p>greylookfashion@gmail.com</p></div>
+
+    <div class="card kpi"><i class="fa fa-id-card"></i><h4>Mobile</h4><p>+971 50 956 5992</p></div>
+
+    <div class="card kpi"><i class="fa fa-users"></i><h4>Total Employees</h4><p>2</p></div>
+
+    <div class="card kpi"><i class="fa fa-university"></i><h4>Bank Account</h4><p>Mashriq</p></div>
+
+    <div class="card kpi"><i class="fa fa-globe"></i><h4>Website</h4><p >www.greylookfashion.com</p></div>
+
   </div>
 
-  <script src="admin/admin.js"></script>
+</div>
+
+
+<!-- ACCOUNTS -->
+<div class="dashboard" id="accountsView" style="display:none">
+  <div class="sheet card">
+    <iframe src="https://docs.google.com/spreadsheets/d/19j15e4jR1czzByvwzQ_OI_TZURrq4kWo/edit?usp=sharing"></iframe>
+  </div>
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="admin/admin.js"></script>
 </body>
-
 </html>
