@@ -57,8 +57,8 @@ body{display:flex;height:100vh;background:#f1f5f9;overflow:hidden}
   box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 .kpi i {font-size:24px;color:#003626;margin-bottom:10px;}
-.kpi h4 {font-size:16px;color:#334155;margin-bottom:6px;}
-.kpi p {font-size:18px;font-weight:600;color:#0f172a;}
+.kpi h4 {font-size:18px;color:#334155;margin-bottom:6px;}
+.kpi p {font-size:15px;font-weight:600;color:#0f172a;}
 
 /* ACTIONS */
 .actions button {
