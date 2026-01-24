@@ -21,7 +21,8 @@ if(localStorage.getItem("isLoggedIn") !== "true"){
 /* LOGOUT */
 document.getElementById("logoutLink").onclick =
 document.getElementById("logoutLinks").onclick = () => {
-  localStorage.clear();
+  localStorage.setItem("isLoggedIn", "false");
+localStorage.removeItem("userEmail");
   window.location.href = "index.html";
 };
 
@@ -70,3 +71,47 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
+let todos = JSON.parse(localStorage.getItem("todos")) || [];
+
+function renderTodos() {
+  const list = document.getElementById("todoList");
+  list.innerHTML = "";
+
+  todos.forEach((todo, index) => {
+    const li = document.createElement("li");
+    li.className = todo.completed ? "completed" : "";
+
+    li.innerHTML = `
+      <span onclick="toggleTodo(${index})">${todo.text}</span>
+      <div class="todo-actions">
+        <i class="fa fa-trash" onclick="deleteTodo(${index})"></i>
+      </div>
+    `;
+
+    list.appendChild(li);
+  });
+
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function addTodo() {
+  const input = document.getElementById("todoInput");
+  if (input.value.trim() === "") return;
+
+  todos.push({ text: input.value, completed: false });
+  input.value = "";
+  renderTodos();
+}
+
+function toggleTodo(index) {
+  todos[index].completed = !todos[index].completed;
+  renderTodos();
+}
+
+function deleteTodo(index) {
+  todos.splice(index, 1);
+  renderTodos();
+}
+
+// Load todos on page load
+renderTodos();
