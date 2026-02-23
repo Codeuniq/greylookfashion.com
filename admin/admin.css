@@ -1,3 +1,16 @@
+:root {
+  --uae-gold: #B68A35;
+  --blue:#122537;
+  --uae-gold-dark: #9C742B;
+  --uae-red: #C8102E;
+  --uae-green: #00843D;
+  --uae-black: #000000;
+  --uae-text: #2E2E2E;
+  --uae-grey: #6C757D;
+  --uae-light-bg: #F5F5F5;
+  --uae-white: #FFFFFF;
+}
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
 body{display:flex;height:100vh;background:#f1f5f9;overflow:hidden}
 
